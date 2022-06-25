@@ -1,0 +1,105 @@
+/* JustKyles.World */
+:root {
+  font-family: monospace;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  --primary-bg-color: #0047e0;
+  --secondary-bg-color: #334224;
+  --primary-txt-color: #ffd20a;
+  --secondary-txt-color: #e0479e;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-txt-color);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+nav {
+  align-content: center;
+  min-height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  height: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.gg-symbol {
+  display: inline-block;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  max-width: 100%;
+}
+
+tbody th {
+  border-bottom: solid;
+  text-align: end;
+}
+
+tbody td:nth-child(2) {
+  text-align: center;
+  padding: 0.5em;
+}
+
+tbody td:nth-child(3) {
+  text-align: start;
+}
+
+footer {
+  align-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+/* Small screens */
+@media only screen and (max-width: 700px) {
+  /* Remove the description column */
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    width: 65%;
+  }
+
+  tbody th {
+    border-bottom: solid;
+    text-align: center;
+  }
+
+  tbody td:nth-child(3) {
+    display: none;
+  }
+
+  table tr:hover {
+    cursor: pointer;
+  }
+}
+
+/* Large(r) screens */
+@media only screen and (min-width: 700px) {
+  tbody tr:hover {
+    cursor: pointer;
+  }
+
+  tbody tr:hover th {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-txt-color);
+  }
+}
